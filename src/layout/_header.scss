@@ -1,5 +1,7 @@
 .educal {
     background: rgb(237, 238, 243);
+    position: relative;
+    z-index: 1;
 
     .container {
         display: flex;
@@ -10,6 +12,7 @@
 
         .logo {
             display: flex;
+            cursor: pointer;
 
             img {
                 width: 114px;
@@ -21,6 +24,7 @@
                 margin-left: 30px;
                 padding-left: 30px;
                 padding-top: 6px;
+                transition: all 0.3s ease-out 0s;
 
                 svg {
                     width: 16px;
@@ -32,6 +36,12 @@
                     padding-top: 3px;
                     padding-left: 14px;
                     line-height: 1;
+                    cursor: pointer;
+
+                }
+
+                &:hover {
+                    color: rgb(13, 110, 253);
                 }
 
                 &::after {
@@ -79,6 +89,10 @@
             }
         }
 
+        .fa-bars {
+            display: none;
+        }
+
         .menu {
             display: flex;
             margin-left: 44px;
@@ -107,7 +121,7 @@
                 .sub-menu {
                     display: none;
                     position: absolute;
-                    top: 120%;
+                    top: 280%;
                     left: 0px;
                     width: 200px;
                     background: rgb(255, 255, 255);
@@ -117,15 +131,39 @@
 
                     li {
                         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-                        transition: all 0.3s ease-out 0s;
+                        transition: all .3s ease-out 0s;
                         margin-left: 0;
+                        overflow: hidden;
 
                         a {
                             display: block;
                             font-size: 13px;
                             color: rgb(14, 17, 51);
-                            padding: 10px 25px;
+                            padding: 15px 25px;
+                            z-index: 2;
+                            position: relative;
                         }
+                    }
+
+                    li:hover a {
+                        color: #fff;
+                    }
+
+                    li::before {
+                        content: "";
+                        position: absolute;
+                        color: white;
+                        top: 0;
+                        right: 100%;
+                        width: 100%;
+                        height: 100%;
+                        background-color: blue;
+                        transition: right 0.6s ease;
+                        z-index: 1;
+                    }
+
+                    li:hover::before {
+                        right: 0;
                     }
                 }
 
@@ -143,6 +181,7 @@
                 position: absolute;
                 top: 19px;
                 left: 24px;
+                cursor: pointer;
             }
 
             input {
@@ -161,6 +200,8 @@
                 position: absolute;
                 left: 55%;
                 top: 17px;
+                cursor: pointer;
+
 
                 &::after {
                     content: "";
@@ -171,6 +212,23 @@
                     height: 30px;
                     background: rgb(219, 223, 233);
                 }
+            }
+
+            span {
+                position: absolute;
+                top: 2px;
+                right: 165px;
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                line-height: 22px;
+                text-align: center;
+                font-size: 14px;
+                color: #fff;
+                background: #2b4eff;
+                border-radius: 50%;
+                font-weight: 500;
+                box-shadow: 0 10px 20px #0417764d;
             }
 
             button {
@@ -184,9 +242,13 @@
                 border: none;
                 font-size: 16px;
                 font-weight: 500;
-                transition: all 0.3s ease-out 0s;
                 cursor: pointer;
                 margin-left: 20px;
+                transition: all 0.3s ease-out 0s;
+
+                &:hover {
+                    box-shadow: rgba(4, 23, 118, 0.3) 0px 10px 24px;
+                }
             }
         }
 
