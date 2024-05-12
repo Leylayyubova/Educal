@@ -13,12 +13,34 @@
 
             .fa-bars {
                 display: block;
-                color: #fff;
+                color: blue;
                 font-size: 30px;
+                position: absolute;
+                top: 30px;
+                right: 42px;
             }
 
-            .menu {
+            .menu, .mobile-menu {
                 display: none;
+                background-color: #fff;
+                padding: 30px;
+                width: 243px;
+
+                li {
+                    margin-left: 0;
+                    color: #000;
+
+                    a {
+                        padding: 12px 0;
+                        display: block;
+                        border-bottom: 1px solid rgba(0, 0, 0, .05);
+                        font-size: 14px;
+                        color: #000;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                    }
+
+                }
             }
 
             form {
@@ -61,6 +83,7 @@
                         .hero-circle {
                             right: -3%;
                         }
+
                         .circle {
                             right: -8%;
                         }
@@ -172,10 +195,15 @@
             .items {
                 .item {
                     padding: 28px 50px;
-                    width: 100%;
+                    width: 96%;
                     display: flex;
                     flex-direction: column;
                     align-items: flex-start;
+
+                    .view {
+                        width: 28%;
+                        margin-top: 14px;
+                    }
                 }
             }
         }
@@ -235,7 +263,8 @@
                 display: flex;
                 flex-direction: column;
 
-                .widget, .company {
+                .widget,
+                .company {
                     width: 100%;
                     margin-left: 0;
                     padding: 0 12px;
@@ -280,6 +309,7 @@
                 margin: 0 6px;
                 margin-bottom: 40px;
             }
+
             .inner {
                 width: 97%;
                 margin: 0 12px;
@@ -296,6 +326,7 @@
             .boxes {
                 display: flex;
                 flex-direction: column;
+
                 .box {
                     width: 100%;
                     margin-bottom: 30px;

@@ -204,24 +204,36 @@
                     color: blue;
 
                     .fa-arrow-right.first {
-                        right: 10%;
-                        visibility: hidden;
-                        opacity: 0;
+                        right: 0;
+                        visibility: visible;
+                        opacity: 1;
                     }
 
                     .fa-arrow-right.second {
-                        right: 0;
+                        right: -10px;
+                        visibility: hidden;
+                        opacity: 0;
                     }
 
                 }
 
                 i {
                     position: absolute;
-                    transition: all 0.3s ease-out 0s;
+                    transition: all 0.1s ease-out 0s;
                     margin-left: 8px;
                     font-size: 14px;
                     top: 3px;
-                }              
+                }
+
+                .fa-arrow-right.first {
+                    right: 10%;
+                    visibility: hidden;
+                    opacity: 0;
+                }
+
+                .fa-arrow-right.second {
+                    right: 0;
+                }
 
             }
         }
@@ -545,11 +557,44 @@
                         }
 
                         a {
+                            position: relative;
                             color: rgb(14, 17, 51);
                             font-size: 16px;
+                            width: 36%;
 
                             &:hover {
                                 color: blue;
+
+                                .fa-arrow-right.first {
+                                    right: 0;
+                                    visibility: visible;
+                                    opacity: 1;
+                                }
+
+                                .fa-arrow-right.second {
+                                    right: -10px;
+                                    visibility: hidden;
+                                    opacity: 0;
+                                }
+
+                            }
+
+                            i {
+                                position: absolute;
+                                transition: all 0.1s ease-out 0s;
+                                margin-left: 8px;
+                                font-size: 14px;
+                                top: 2px;
+                            }
+
+                            .fa-arrow-right.first {
+                                right: 10%;
+                                visibility: hidden;
+                                opacity: 0;
+                            }
+
+                            .fa-arrow-right.second {
+                                right: 0;
                             }
                         }
                     }
@@ -974,14 +1019,48 @@
 
                 }
 
-                a {
+                .view {
                     font-size: 16px;
                     color: rgb(109, 110, 117);
                     font-weight: 500;
+                    position: relative;
+                    width: 11%;
 
                     &:hover {
-                        color: rgb(43, 78, 255);
+                        color: blue;
+
+                        .fa-arrow-right.first {
+                            right: 0;
+                            visibility: visible;
+                            opacity: 1;
+                        }
+
+                        .fa-arrow-right.second {
+                            right: -10px;
+                            visibility: hidden;
+                            opacity: 0;
+                        }
+
                     }
+
+                    i {
+                        position: absolute;
+                        transition: all 0.1s ease-out 0s;
+                        margin-left: 8px;
+                        font-size: 14px;
+                        top: 3px;
+                    }
+
+                    .fa-arrow-right.first {
+                        right: 10%;
+                        visibility: hidden;
+                        opacity: 0;
+                    }
+
+                    .fa-arrow-right.second {
+                        right: 0;
+                    }
+
                 }
 
                 &::after {

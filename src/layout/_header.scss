@@ -93,7 +93,8 @@
             display: none;
         }
 
-        .menu {
+        .menu,
+        .mobile-menu {
             display: flex;
             margin-left: 44px;
 
@@ -172,24 +173,6 @@
                     li:hover a {
                         color: #fff;
                     }
-
-                    // li::before {
-                    //     content: "";
-                    //     position: absolute;
-                    //     color: white;
-                    //     top: 0;
-                    //     right: 100%;
-                    //     width: 100%;
-                    //     height: 100%;
-                    //     background-color: blue;
-                    //     transition: all 0.6s ease-in-out;
-                    //     z-index: 1;
-                    // }
-
-                    // li:hover::before {
-                    //     right: 0;
-                    // }
-
                 }
 
                 &:hover .sub-menu {
@@ -197,6 +180,34 @@
                 }
             }
 
+        }
+
+        .mobile-menu {
+            li {
+                a {
+                    position: relative;
+
+                    &::before {
+                        position: absolute;
+                        content: "";
+                        left: auto;
+                        right: 0;
+                        bottom: 34px;
+                        width: 0%;
+                        height: 1px;
+                        background: #ffffff;
+                        transition: all .3s ease-out 0s;
+
+                    }
+
+                    &:hover::before {
+                        width: 100%;
+                        left: 0;
+                        right: auto;
+                        transform-origin: right;
+                    }
+                }
+            }
         }
 
         form {
@@ -227,7 +238,6 @@
                 top: 17px;
                 cursor: pointer;
 
-
                 &::after {
                     content: "";
                     position: absolute;
@@ -254,6 +264,11 @@
                 border-radius: 50%;
                 font-weight: 500;
                 box-shadow: 0 10px 20px #0417764d;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #000;
+                }
             }
 
             button {
@@ -275,6 +290,7 @@
                     box-shadow: rgba(4, 23, 118, 0.3) 0px 10px 24px;
                 }
             }
+
         }
 
     }
